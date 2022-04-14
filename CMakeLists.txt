@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+project(blockchain)
+set(CMAKE_PROJECT_VERSION 1)
+set(CMAKE_PROJECT_VERSION_MINOR 0)
+
+set(CMAKE_CXX_STANDARD 11)
+
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_INSTALL_PREFIX $ENV{HOME}/.local)
+
+message(STATUS "CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
+message(STATUS "CMAKE_BINARY_DIR = ${CMAKE_BINARY_DIR}")
+message(STATUS "CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
+message(STATUS "CMAKE_RUNTIME_OUTPUT_DIRECTORY =  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON)
+add_compile_options(-Wall -Wextra -fexceptions)
+
+add_subdirectory(src)
+#add_subdirectory(test)
+
